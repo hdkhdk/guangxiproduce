@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广西八桂星眸智能科技有限公司 - CIS企业形象识别系统</title>
+    <style>
+        nav .brand img.nav-logo {
+            height: 28px;
+            border-radius: 4px;
+        }
+
+        .hero .hero-logo-wrap {
+            margin-bottom: 24px;
+        }
+
+        .hero .hero-logo-wrap img {
+            height: 72px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        /* ===== 变量与重置 ===== */
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2b5790;
+            --accent: #d69e2e;
+            --accent-light: #ecc94b;
+            --bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --text: #2d3748;
+            --text-light: #718096;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(26, 54, 93, 0.1);
+            --shadow-hover: 0 8px 40px rgba(26, 54, 93, 0.18);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+            line-height: 1.9;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* ===== 顶部导航 ===== */
+        nav {
+            background: rgba(26, 54, 93, 0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(214, 158, 46, 0.3);
+            transition: var(--transition);
+        }
+
+        nav .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .brand {
+            color: white;
+            font-size: 1.05em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav .brand .logo-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--accent);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--accent); }
+            50% { opacity: 0.7; box-shadow: 0 0 16px var(--accent); }
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            padding: 14px 14px;
+            font-size: 0.88em;
+            border-radius: 6px;
+            transition: var(--transition);
+            letter-spacing: 0.3px;
+        }
+
+        nav a:hover {
+            color: white;
+            background: rgba(214, 158, 46, 0.2);
+        }
+
+        /* ===== 主容器 ===== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 85px 24px 60px;
+        }
+
+        /* ===== 封面区 ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 60%, #1e4a7a 100%);
+            color: white;
+            padding: 80px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(214, 158, 46, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 30%, rgba(214, 158, 46, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero .hero-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .hero-badge {
+            display: inline-block;
+            background: rgba(214, 158, 46, 0.2);
+            border: 1px solid rgba(214, 158, 46, 0.5);
+            color: var(--accent-light);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.85em;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.8em, 4vw, 2.8em);
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span { color: var(--accent-light); }
+
+        .hero .tagline {
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 32px;
+            letter-spacing: 1px;
+        }
+
+        .hero .hero-pills {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero .pill {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85em;
+            backdrop-filter: blur(6px);
+            transition: var(--transition);
+        }
+
+        .hero .pill:hover {
+            background: rgba(214, 158, 46, 0.3);
+            border-color: rgba(214, 158, 46, 0.6);
+        }
+
+        /* ===== 区块标题 ===== */
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-header .num {
+            font-size: 0.8em;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.5em, 3vw, 2em);
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-header .line {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            margin: 0 auto 16px;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 0.95em;
+        }
+
+        /* ===== 卡片 ===== */
+        section {
+            margin-bottom: 48px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 36px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(214, 158, 46, 0.3);
+        }
+
+        /* ===== 标题层级 ===== */
+        h2.section-title {
+            color: var(--primary);
+            font-size: 1.5em;
+            font-weight: 800;
+            padding-bottom: 14px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2.section-title .icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        h3 {
+            color: var(--primary);
+            font-size: 1.2em;
+            font-weight: 700;
+            margin: 28px 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3:first-child { margin-top: 0; }
+
+        h3 .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        h4 {
+            color: var(--text);
+            font-size: 1.05em;
+            font-weight: 600;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            text-align: justify;
+            color: var(--text);
+        }
+
+        /* ===== 列表 ===== */
+        ul, ol {
+            margin: 10px 0 16px 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 6px;
+            color: var(--text);
+        }
+
+        li::marker { color: var(--accent); }
+
+        strong { color: var(--primary); font-weight: 700; }
+        .highlight { color: var(--accent); font-weight: 700; }
+
+        /* ===== 价值观网格 ===== */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, rgba(26, 54, 93, 0.04), rgba(26, 54, 93, 0.08));
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 22px;
+            border-left: 3px solid var(--accent);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 24px rgba(26, 54, 93, 0.12);
+        }
+
+        .value-card h4 {
+            color: var(--primary);
+            margin: 0 0 8px;
+            font-size: 1.05em;
+        }
+
+        .value-card p { margin: 0; font-size: 0.9em; color: var(--text-light); }
+
+        /* ===== 色彩展示 ===== */
+        .color-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .color-card {
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .color-swatch {
+            width: 100%;
+            height: 80px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 8px;
+        }
+
+        .color-swatch span {
+            background: rgba(255,255,255,0.85);
+            color: #333;
+            font-size: 0.7em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .sw-primary { background: linear-gradient(135deg, #1a365d, #2b5790); }
+        .sw-gold { background: linear-gradient(135deg, #d69e2e, #ecc94b); }
+        .sw-white { background: #f8f9fa; border: 1px solid #dee2e6; }
+        .sw-black { background: #1a1a2e; }
+        .sw-black span { background: rgba(255,255,255,0.15); color: white; }
+
+        /* ===== 产品介绍 ===== */
+        .product-section { margin-bottom: 48px; }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            margin-bottom: 32px;
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 28px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .product-header.gold {
+            background: linear-gradient(135deg, #8B6914, #d69e2e);
+        }
+
+        .product-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 1.4em;
+        }
+
+        .product-header h3 .subtitle {
+            display: block;
+            font-size: 0.6em;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: 4px;
+            letter-spacing: 1px;
+        }
+
+        .product-badge {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8em;
+            white-space: nowrap;
+            backdrop-filter: blur(4px);
+        }
+
+        .product-body {
+            padding: 28px 32px;
+        }
+
+        .product-image-wrap {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .product-img-box {
+            flex: 1;
+            min-width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .product-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .product-img-box:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-img-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 54, 93, 0.06), rgba(214, 158, 46, 0.08));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            gap: 8px;
+        }
+
+        .product-img-placeholder .ph-icon {
+            font-size: 2.5em;
+            opacity: 0.4;
+        }
+
+        .product-img-placeholder .ph-text {
+            font-size: 0.75em;
+            opacity: 0.5;
+            text-align: center;
+            padding: 0 16px;
+        }
+
+        .product-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 14px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 14px;
+            background: rgba(26, 54, 93, 0.03);
+            border-radius: 8px;
+            border: 1px solid rgba(26, 54, 93, 0.06);
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            background: rgba(214, 158, 46, 0.06);
+            border-color: rgba(214, 158, 46, 0.2);
+        }
+
+        .feature-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85em;
+            flex-shrink: 0;
+        }
+
+        .feature-item.gold .feature-icon {
+            background: linear-gradient(135deg, #8B6914, #d69e2e);
+        }
+
+        .feature-text strong {
+            display: block;
+            font-size: 0.92em;
+            color: var(--primary);
+            margin-bottom: 2px;
+        }
+
+        .feature-text span {
+            font-size: 0.85em;
+            color: var(--text-light);
+        }
+
+        /* ===== 实施时间轴 ===== */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 4px;
+            bottom: 4px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent), var(--primary));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .timeline-item .t-label {
+            font-size: 0.8em;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .timeline-item .t-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.05em;
+        }
+
+        .timeline-item .t-desc {
+            font-size: 0.9em;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* ===== 页脚 ===== */
+        footer {
+            background: linear-gradient(135deg, var(--primary), #0f2340);
+            color: white;
+            text-align: center;
+            padding: 48px 24px;
+            margin-top: 60px;
+        }
+
+        footer .footer-brand {
+            font-size: 1.3em;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-tagline {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-divider {
+            width: 80px;
+            height: 2px;
+            background: var(--accent);
+            margin: 0 auto 20px;
+            border-radius: 1px;
+        }
+
+        footer .footer-copy {
+            font-size: 0.8em;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 1px;
+        }
+
+        /* ===== 滚动动画 ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 768px) {
+            nav .nav-inner { flex-direction: column; gap: 6px; padding: 10px 16px; }
+            nav ul { justify-content: center; }
+            nav a { padding: 8px 10px; font-size: 0.8em; }
+            .hero { padding: 60px 20px; }
+            .hero h1 { font-size: 1.6em; }
+            .container { padding: 80px 16px 40px; }
+            .card { padding: 24px 20px; }
+            .product-header { flex-direction: column; text-align: center; }
+            .product-body { padding: 20px; }
+            .product-features { grid-template-columns: 1fr; }
+            .product-image-wrap { flex-direction: column; }
+            .product-img-box { height: 180px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">
+                <img src="static/logo.jpg" alt="八桂星眸" class="nav-logo" onerror="this.style.display='none'">
+                <div class="logo-dot"></div>
+                八桂星眸
+            </div>
+            <ul>
+                <li><a href="#preface">前言</a></li>
+                <li><a href="#mi">理念识别 MI</a></li>
+                <li><a href="#bi">行为识别 BI</a></li>
+                <li><a href="#vi">视觉识别 VI</a></li>
+                <li><a href="#plan">实施计划</a></li>
+                <li><a href="#products">产品介绍</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 封面区 -->
+    <div class="hero">
+        <div class="hero-inner">
+            <div class="hero-logo-wrap">
+                <img src="static/logo.jpg" alt="八桂星眸Logo">
+            </div>
+            <div class="hero-badge">Corporate Identity System</div>
+            <h1>广西<span>八桂星眸</span>智能科技有限公司</h1>
+            <p class="tagline">CIS 企业形象识别系统 · 以智慧之眼 赋能美好未来</p>
+            <div class="hero-pills">
+                <span class="pill">MI 理念识别</span>
+                <span class="pill">BI 行为识别</span>
+                <span class="pill">VI 视觉识别</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- 一、前言 -->
+        <section id="preface" class="fade-in">
+            <div class="section-header" style="margin-bottom: 32px;">
+                <span class="num">Part 01</span>
+                <div class="line"></div>
+                <h2>前言</h2>
+            </div>
+            <div class="card">
+                <h3><span class="dot"></span>项目背景与目标</h3>
+                <p>广西八桂星眸智能科技有限公司聚焦人工智能领域，立足广西，以"<span class="highlight">智慧之眼</span>"为核心理念，致力于推动人工智能产业发展与经济社会数字化转型。</p>
+                <p>本CIS系统规划旨在通过理念识别、行为识别、视觉识别三大体系的有机整合，塑造统一、鲜明的企业形象，提升品牌竞争力，助力企业成为广西乃至西南地区人工智能领域的"<span class="highlight">智慧标杆</span>"，辐射东盟市场。</p>
+
+                <h3><span class="dot"></span>CIS系统对企业发展的战略意义</h3>
+                <p>CIS系统是企业对内凝聚向心力、对外强化品牌认知的重要工具。通过系统规划，能够明确企业核心价值，规范员工行为，塑造独特的视觉形象，从而增强企业的市场辨识度与品牌影响力，为企业的长期发展奠定坚实基础。</p>
+            </div>
+        </section>
+
+        <!-- 二、理念识别系统 -->
+        <section id="mi" class="fade-in">
+            <div class="section-header">
+                <span class="num">Part 02</span>
+                <div class="line"></div>
+                <h2>理念识别系统 MI</h2>
+                <p>思想是行动的指南，理念是品牌的灵魂</p>
+            </div>
+            <div class="card">
+                <h3><span class="dot"></span>企业使命</h3>
+                <p>以智能技术推动性别平等，让每一位中道女性都能在AI时代中找到属于自己的发展路径。通过技术创新降低女性参与社会经济活动的门槛，赋能她们在教育、就业与创业中实现自我价值。</p>
+
+                <h3><span class="dot"></span>企业愿景</h3>
+                <p>作为人工智能领域女性创业创新的引领者，以智慧科技赋能美丽人生，成为现代家庭幸福的重要建设者。</p>
+
+                <h3><span class="dot"></span>核心价值观</h3>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <h4>创新驱动</h4>
+                        <p>持续探索人工智能前沿技术，保持思维科学的领先优势，实现人机协同的不断完美升级。</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>扎根本土</h4>
+                        <p>赋能广西千行百业，重点推进居家养老和智慧社区建设，营造幸福家庭范式。</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>开放融合</h4>
+                        <p>构建共生共荣的AI生态体系，吸纳全球智慧，共创技术人文交融的美好生活。</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>责任担当</h4>
+                        <p>聚焦弱势群体关怀，践行科技向善理念，主动承担社会公益责任。</p>
+                    </div>
+                </div>
+
+                <h3><span class="dot"></span>经营理念</h3>
+                <p>坚持场景驱动与敏捷迭代，深耕康、文、旅垂直领域应用，打造可复制、可推广的和美生活智能解决方案。</p>
+
+                <h3><span class="dot"></span>战略定位</h3>
+                <p>打造人工智能产业的"<span class="highlight">六边形战士</span>"，在技术研发、应用服务、市场拓展、人才培养、合作创新、社会责任等六个维度全面发力，培养"六边形"人才，为女性创业创新提供全方位、一站式的智能解决方案。</p>
+            </div>
+        </section>
+
+        <!-- 三、行为识别系统 -->
+        <section id="bi" class="fade-in">
+            <div class="section-header">
+                <span class="num">Part 03</span>
+                <div class="line"></div>
+                <h2>行为识别系统 BI</h2>
+                <p>规范行为，传递价值，让每一次互动都体现品牌精神</p>
+            </div>
+            <div class="card">
+                <h2 class="section-title"><span class="icon">内</span>内部行为规范</h2>
+
+                <h3><span class="dot"></span>员工行为准则</h3>
+                <ul>
+                    <li><strong>专业高效：</strong>以结果为导向，注重团队协作与责任担当，在项目推进中践行敏捷文化，确保每个环节高效运转。</li>
+                    <li><strong>团结协作：</strong>倡导开放沟通，鼓励跨部门协同创新，形成资源共享、优势互补的工作机制。</li>
+                    <li><strong>诚信正直：</strong>言行一致，杜绝任何形式的弄虚作假，建立长期信任关系。</li>
+                </ul>
+
+                <h3><span class="dot"></span>培训与发展体系</h3>
+                <p>建立完善的培训体系，包括新员工入职培训、专业技能培训、管理能力培训等；为员工制定个性化的职业发展规划。结合AI工具平台，实现培训数据化、反馈实时化，持续优化成长路径。鼓励女性员工勇挑重担，在关键岗位和研发项目中发挥引领作用。</p>
+
+                <h3><span class="dot"></span>企业文化活动</h3>
+                <p>定期组织团队建设活动、技术分享会、文化沙龙等，增强员工凝聚力与归属感；通过年度创新大赛、公益志愿服务日等特色活动，强化企业使命认同，推动价值观落地。鼓励员工参与社区赋能项目，在智慧养老、女性发展等领域贡献专业力量。</p>
+
+                <h2 class="section-title" style="margin-top: 40px;"><span class="icon">外</span>外部行为规范</h2>
+
+                <h3><span class="dot"></span>客户服务标准</h3>
+                <p>建立标准化的客户服务流程，提供7×24小时在线咨询服务；定期回访客户，收集反馈意见，持续优化服务质量。</p>
+
+                <h3><span class="dot"></span>市场推广策略</h3>
+                <p>结合线上线下渠道，开展行业展会、技术研讨会、线上直播等多样化的市场推广活动；突出"八桂星眸"的品牌特色与技术优势。通过精准投放与内容创新，提升品牌在年轻消费群体中的认知度与美誉度。</p>
+
+                <h3><span class="dot"></span>合作与公益活动</h3>
+                <p>积极与高校、科研机构、企业开展产学研合作，推动技术创新；参与社会公益活动，如为广西偏远地区学校捐赠智能教育设备，提升企业社会形象。联合心理机构开展孤独症儿童艺术疗愈课堂，携手车企打造"星空巴士"公益巡展。</p>
+            </div>
+        </section>
+
+        <!-- 四、视觉识别系统 -->
+        <section id="vi" class="fade-in">
+            <div class="section-header">
+                <span class="num">Part 04</span>
+                <div class="line"></div>
+                <h2>视觉识别系统 VI</h2>
+                <p>以视觉语言传递品牌精神，用统一形象强化市场认知</p>
+            </div>
+            <div class="card">
+                <h3><span class="dot"></span>标志（Logo）设计</h3>
+                <p><strong>设计理念：</strong>融合"八桂"地域元素与"星眸"智能科技意象。采用广西壮锦、半导体电路板等元素进行抽象化处理，与代表科技的"星""眸"造型相结合，体现立足广西发展AI科技的宗旨。</p>
+                <p><strong>造型特点：</strong>以<span class="highlight">六边形</span>为基础框架，呼应"六边形战士"的战略定位，线条简洁流畅，富有现代感与科技感。寓意电路板的箭头，以端开放的形态构成无限的想象空间，代表着"八桂星眸"对外融合发展的思路。</p>
+                <p><strong>色彩方案：</strong>主色调采用深蓝色，象征科技、智慧与专业；辅以金色，寓意星光闪耀，突出"星眸"的核心概念。</p>
+
+                <h3><span class="dot"></span>标准字体</h3>
+                <p>选择简洁、现代的无衬线字体，中文与英文搭配使用，确保在不同场景下的可读性与视觉统一性。</p>
+
+                <h3><span class="dot"></span>标准色彩</h3>
+                <div class="color-grid">
+                    <div class="color-card">
+                        <div class="color-swatch sw-primary"><span>#1A365D</span></div>
+                        <strong>深蓝色 · 主色</strong><br>
+                        <small>科技 · 智慧 · 专业</small>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch sw-gold"><span>#D69E2E</span></div>
+                        <strong>金色 · 辅助色</strong><br>
+                        <small>星光 · 温暖 · 闪耀</small>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch sw-white"><span>#FFFFFF</span></div>
+                        <strong>白色 · 辅助色</strong><br>
+                        <small>纯净 · 简约 · 留白</small>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch sw-black"><span>#1A1A2E</span></div>
+                        <strong>深色 · 辅助色</strong><br>
+                        <small>沉稳 · 高级 · 对比</small>
+                    </div>
+                </div>
+
+                <h3><span class="dot"></span>辅助图形</h3>
+                <p>设计与logo相呼应的辅助图形，如抽象化的星芒、眼眸图案，可用于背景装饰、宣传物料等，增强视觉识别度。</p>
+
+                <h3><span class="dot"></span>应用系统</h3>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <h4>办公用品系统</h4>
+                        <p>名片、信纸、信封、文件夹、笔记本等，统一应用logo与标准色彩。</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>办公环境系统</h4>
+                        <p>企业形象墙、会议室布置、走廊文化展示、指示标识系统。</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>广告宣传系统</h4>
+                        <p>海报、宣传册、宣传片、线上广告等，突出品牌特色。</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>员工服饰系统</h4>
+                        <p>统一的员工工作服、工作牌，体现企业形象与团队精神。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 五、实施计划 -->
+        <section id="plan" class="fade-in">
+            <div class="section-header">
+                <span class="num">Part 05</span>
+                <div class="line"></div>
+                <h2>CIS系统实施计划</h2>
+                <p>分阶段推进，系统落地，持续优化</p>
+            </div>
+            <div class="card">
+                <h3><span class="dot"></span>执行步骤与时间安排</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="t-label">第一阶段 · 1~2个月</div>
+                        <div class="t-title">调研分析阶段</div>
+                        <div class="t-desc">开展企业内部调研、市场调研与竞争对手分析，明确企业现状与需求。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="t-label">第二阶段 · 2~3个月</div>
+                        <div class="t-title">设计开发阶段</div>
+                        <div class="t-desc">完成MI、BI、VI系统的设计方案，组织内部评审与修改完善。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="t-label">第三阶段 · 3~6个月</div>
+                        <div class="t-title">推广实施阶段</div>
+                        <div class="t-desc">分阶段、分部门推进CIS系统的实施，开展员工培训，确保系统落地。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="t-label">第四阶段 · 长期</div>
+                        <div class="t-title">评估优化阶段</div>
+                        <div class="t-desc">定期对CIS系统的实施效果进行评估，根据反馈意见进行优化调整。</div>
+                    </div>
+                </div>
+
+                <h3><span class="dot"></span>责任分工与资源调配</h3>
+                <p>成立CIS项目小组，由企业高层领导担任组长，统筹协调各部门工作；明确设计团队、市场部门、人力资源部门等的职责分工；合理调配人力、物力、财力资源，保障项目顺利推进。</p>
+
+                <h3><span class="dot"></span>效果评估与优化机制</h3>
+                <p>建立CIS系统效果评估指标体系，从品牌认知度、市场影响力、员工满意度等维度进行评估；定期召开评估会议，分析存在的问题，制定优化方案，持续提升CIS系统的有效性。</p>
+            </div>
+        </section>
+
+        <!-- 六、产品介绍 -->
+        <section id="products" class="fade-in">
+            <div class="section-header">
+                <span class="num">Part 06</span>
+                <div class="line"></div>
+                <h2>产品介绍</h2>
+                <p>AI赋能生活，智慧创造美好</p>
+            </div>
+
+            <!-- 达蒙产品 -->
+            <div class="product-card fade-in">
+                <div class="product-header">
+                    <div>
+                        <h3>
+                            达蒙 AI教育机器人
+                            <span class="subtitle">一台达蒙 = 9个好伙伴 · 为青少年教育而生</span>
+                        </h3>
+                    </div>
+                    <span class="product-badge">AI教育</span>
+                </div>
+                <div class="product-body">
+                    <!-- 产品图片区 -->
+                    <div class="product-image-wrap">
+                        <div class="product-img-box">
+                            <img src="static/damon-1.jpg" alt="达蒙机器人" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-img-placeholder" style="display:none;">
+                                <div class="ph-icon">🤖</div>
+                                <div class="ph-text">将产品图片放置于<br>static/damon-1.jpg</div>
+                            </div>
+                        </div>
+                        <div class="product-img-box">
+                            <img src="static/damon-2.jpg" alt="达蒙学习场景" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-img-placeholder" style="display:none;">
+                                <div class="ph-icon">📚</div>
+                                <div class="ph-text">将产品图片放置于<br>static/damon-2.jpg</div>
+                            </div>
+                        </div>
+                        <div class="product-img-box">
+                            <img src="static/damon-3.jpg" alt="达蒙功能展示" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-img-placeholder" style="display:none;">
+                                <div class="ph-icon">🎓</div>
+                                <div class="ph-text">将产品图片放置于<br>static/damon-3.jpg</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 功能特点 -->
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">🖥</div>
+                            <div class="feature-text">
+                                <strong>一键投屏</strong>
+                                <span>家秒变智慧课堂，无需奔波辅导班，打开AI投屏即可选择人教版课程</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">👩‍🏫</div>
+                            <div class="feature-text">
+                                <strong>实时AI老师</strong>
+                                <span>在线讲解互动，高效强化学习效果，激发孩子学习兴趣</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🗣</div>
+                            <div class="feature-text">
+                                <strong>英语互动训练</strong>
+                                <span>标准专业级口语训练，口语自信提升，学习陪伴两不误</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">👁</div>
+                            <div class="feature-text">
+                                <strong>视觉识别学习</strong>
+                                <span>孩子拿起卡片或物品，达蒙快速识别解答，让学习像玩耍一样轻松</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📔</div>
+                            <div class="feature-text">
+                                <strong>AI成长日记</strong>
+                                <span>分析孩子每周成长瞬间，分析行为背后的教育方式</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🌟</div>
+                            <div class="feature-text">
+                                <strong>兴趣发现</strong>
+                                <span>帮助家长发现孩子兴趣、优势与潜力，成为科学育儿的贴心助手</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔊</div>
+                            <div class="feature-text">
+                                <strong>多模态交互</strong>
+                                <span>支持语音+图像+视觉交互，孩子提问更自然，解答更直观</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎨</div>
+                            <div class="feature-text">
+                                <strong>AI绘画</strong>
+                                <span>激发想象力，随时启发创意，轻松绘出无限可能，让孩子爱上创造</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">⏰</div>
+                            <div class="feature-text">
+                                <strong>时间管理与提醒</strong>
+                                <span>自然语言设置学习计划，达蒙贴心提醒，让孩子更自律，家长更省心</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 瓦力产品 -->
+            <div class="product-card fade-in">
+                <div class="product-header gold">
+                    <div>
+                        <h3>
+                            瓦力 情感陪护机器人
+                            <span class="subtitle">缓解孤独感 · 主动智能有温度的陪护机器人</span>
+                        </h3>
+                    </div>
+                    <span class="product-badge">智慧养老</span>
+                </div>
+                <div class="product-body">
+                    <!-- 产品图片区 -->
+                    <div class="product-image-wrap">
+                        <div class="product-img-box">
+                            <img src="static/walle-1.jpg" alt="瓦力机器人" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-img-placeholder" style="display:none;">
+                                <div class="ph-icon">🧡</div>
+                                <div class="ph-text">将产品图片放置于<br>static/walle-1.jpg</div>
+                            </div>
+                        </div>
+                        <div class="product-img-box">
+                            <img src="static/walle-2.jpg" alt="瓦力陪护场景" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-img-placeholder" style="display:none;">
+                                <div class="ph-icon">🏠</div>
+                                <div class="ph-text">将产品图片放置于<br>static/walle-2.jpg</div>
+                            </div>
+                        </div>
+                        <div class="product-img-box">
+                            <img src="static/walle-3.jpg" alt="瓦力健康监测" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-img-placeholder" style="display:none;">
+                                <div class="ph-icon">💓</div>
+                                <div class="ph-text">将产品图片放置于<br>static/walle-3.jpg</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 功能特点 -->
+                    <div class="product-features">
+                        <div class="feature-item gold">
+                            <div class="feature-icon">😊</div>
+                            <div class="feature-text">
+                                <strong>情绪识别与倾听</strong>
+                                <span>能识别老人情绪，引导老人讲述过去的故事，温暖陪伴每一天</span>
+                            </div>
+                        </div>
+                        <div class="feature-item gold">
+                            <div class="feature-icon">📊</div>
+                            <div class="feature-text">
+                                <strong>生命体征关怀</strong>
+                                <span>智能手环实时显示心率，数据自动上传，异常情况即时通知家人</span>
+                            </div>
+                        </div>
+                        <div class="feature-item gold">
+                            <div class="feature-icon">👨‍👩‍👧</div>
+                            <div class="feature-text">
+                                <strong>家庭社交连接</strong>
+                                <span>克隆子女声音与面貌，家庭信息共享，远程也能参与老人生活</span>
+                            </div>
+                        </div>
+                        <div class="feature-item gold">
+                            <div class="feature-icon">🎮</div>
+                            <div class="feature-text">
+                                <strong>互动游戏</strong>
+                                <span>猜谜语、下象棋、打扑克等，丰富老人精神生活，增进家庭情感</span>
+                            </div>
+                        </div>
+                        <div class="feature-item gold">
+                            <div class="feature-icon">💊</div>
+                            <div class="feature-text">
+                                <strong>智能健康管家</strong>
+                                <span>提醒用药、血糖/血压/心率监测，异常时自动发出警报</span>
+                            </div>
+                        </div>
+                        <div class="feature-item gold">
+                            <div class="feature-icon">🤝</div>
+                            <div class="feature-text">
+                                <strong>智能生活助手</strong>
+                                <span>像儿女一样关心，像护士一样专业，像管家一样可靠，像朋友一样陪伴</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-brand">广西八桂星眸智能科技有限公司</div>
+        <div class="footer-tagline">人工智能领域女性创业创新引领者 · 以"智慧之眼"赋能美好生活</div>
+        <div class="footer-divider"></div>
+        <div class="footer-copy">© 2026 Guangxi Bagui Xingmou Intelligent Technology Co., Ltd.</div>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // 滚动淡入动画
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
